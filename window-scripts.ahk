@@ -14,7 +14,6 @@ SetTitleMatchMode, 2
 #f::
   WinGet mon, ID, A
   activeMon := GetMonitorIndexFromWindow(activeWin)
-  msgbox %activeMon%
   SysGet mon, Monitorworkarea, %activeMon%
   WinMove,A,,monleft, montop,monright,monbottom
   return
@@ -22,7 +21,6 @@ SetTitleMatchMode, 2
 #j::
   WinGet mon, ID, A
   activeMon := GetMonitorIndexFromWindow(activeWin)
-  msgbox %activeMon%
   SysGet mon, Monitorworkarea, %activeMon%
   WinMove,A,,monleft, montop,(monright-monleft)/2,monbottom
   return
@@ -30,7 +28,6 @@ SetTitleMatchMode, 2
 #;::
   WinGet mon, ID, A
   activeMon := GetMonitorIndexFromWindow(activeWin)
-  msgbox %activeMon%
   SysGet mon, Monitorworkarea, %activeMon%
   WinMove,A,,(monright-monleft)/2, montop,monright,monbottom
   return
