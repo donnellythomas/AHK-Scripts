@@ -35,6 +35,6 @@ Return
 #+1::OpenProgram("C:\Users\donne\AppData\Local\Programs\Microsoft VS Code\Code.exe")
 #2::FocusOrOpen("- Google Chrome","C:\Program Files\Google\Chrome\Application\chrome.exe")
 #+2::OpenProgram("C:\Program Files\Google\Chrome\Application\chrome.exe")
-#3::msgbox touched again
-
+#3::FocusOrOpen("Notion", "C:\Users\donne\AppData\Local\Programs\Notion\Notion.exe")
+#+3::OpenProgram("C:\Users\donne\AppData\Local\Programs\Notion\Notion.exe")
 
