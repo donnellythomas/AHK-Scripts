@@ -6,6 +6,8 @@ SetTitleMatchMode, 2
 ; ~Escape::Reload
 ; Shortcut for jumping to applications and cycling through open windows of that application
 ~^s::Reload
+
+;cannot user classes because vscode and chrome are same
 OpenProgram(applicationPath){
 	run "%applicationPath%",,, process_id
 		WinWait, ahk_pid %process_id%,, 1.5
@@ -17,24 +19,22 @@ OpenProgram(applicationPath){
 FocusOrOpen(windowTitle, applicationPath){
 	if(WinExist(windowTitle)){
 		if(WinActive(windowTitle)){
-			WinActivateBottom, %windowTit4le%
-			; msgbox window toggled
+			WinActivateBottom, %windowTitle%
 		}
 		else{
 			WinActivate
-			; msgbox window acticated
 		}
 	}
 	else{
 		OpenProgram(ApplicationPath)
 	}
-
-Return
+	Return
 }
+
 #1::FocusOrOpen("- Visual Studio Code","C:\Users\donne\AppData\Local\Programs\Microsoft VS Code\Code.exe")
 #+1::OpenProgram("C:\Users\donne\AppData\Local\Programs\Microsoft VS Code\Code.exe")
 #2::FocusOrOpen("- Google Chrome","C:\Program Files\Google\Chrome\Application\chrome.exe")
 #+2::OpenProgram("C:\Program Files\Google\Chrome\Application\chrome.exe")
 #4::FocusOrOpen("Notion", "C:\Users\donne\AppData\Local\Programs\Notion\Notion.exe")
-#+4::OpenProgram("C:\Users\donne\AppData\Local\Programs\Notion\Notion.exe")
-
+#3::FocusOrOpen("ahk_class CabinetWClass", "C:\Users\donne\Desktop\Personal")
+#+3::OpenProgram("C:\Users\donne\Desktop\Personal")
