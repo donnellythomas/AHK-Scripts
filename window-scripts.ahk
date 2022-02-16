@@ -17,6 +17,9 @@ SetTitleMatchMode, 2
   SysGet mon, Monitorworkarea, %activeMon%
   WinMove,A,,monleft, montop,monright,monbottom
   return
+;winow minimize
+#m::WinMinimize,A
+;
 ;snap window left
 #j::
   WinGet mon, ID, A
